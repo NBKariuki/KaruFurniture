@@ -118,27 +118,53 @@ export default function App() {
 
     {/* HERO */}
     <section style={{minHeight:"100vh",background:C.navy,paddingTop:64,display:"flex",alignItems:"center"}}>
-      <div className="hg" style={{maxWidth:1200,margin:"0 auto",padding:"60px 32px",display:"grid",gridTemplateColumns:"1fr 1fr",gap:40,alignItems:"center",width:"100%"}}>
+      <div className="hg" style={{maxWidth:1200,margin:"0 auto",padding:"60px 32px",display:"grid",gridTemplateColumns:"1fr 1fr",gap:60,alignItems:"center",width:"100%"}}>
         <div>
-          <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.25em",marginBottom:20,textTransform:"uppercase"}}>◆ Gachie, Nairobi</div>
-          <h1 className="h1" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:88,lineHeight:0.92,color:C.white,letterSpacing:"0.02em",marginBottom:24}}>
-            YOUR HOME.<br/><span style={{color:C.yellow}}>YOUR STORY.</span>
-          </h1>
-          <p style={{color:C.muted,fontSize:16,lineHeight:1.7,maxWidth:420,marginBottom:40}}>Quality furniture for Nairobi homes — stylish pieces at prices that make sense.</p>
-          <div style={{display:"flex",gap:14,flexWrap:"wrap",marginBottom:44}}>
-            <a href="#cat" className="by" style={{background:C.yellow,color:C.navy,padding:"14px 28px",borderRadius:4,fontSize:14,fontWeight:700,display:"inline-block"}}>Browse Collection →</a>
-            <button className="bg" onClick={()=>wa(null)} style={{background:"transparent",color:C.white,border:"1px solid rgba(255,255,255,0.25)",padding:"14px 28px",borderRadius:4,fontSize:14}}>WhatsApp Us</button>
+          <div style={{display:"inline-block",background:"rgba(245,192,0,0.1)",border:"1px solid rgba(245,192,0,0.25)",borderRadius:100,padding:"5px 14px",marginBottom:28}}>
+            <span style={{color:C.yellow,fontSize:12,fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>Now open in Gachie, Nairobi</span>
           </div>
-          <div style={{display:"flex",gap:28,flexWrap:"wrap"}}>
-            {["Quality","Affordable","Stylish"].map(p=><span key={p} style={{color:C.muted,fontSize:13}}><span style={{color:C.yellow}}>◆</span> {p}</span>)}
+          <h1 className="h1" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:82,lineHeight:0.95,color:C.white,letterSpacing:"0.02em",marginBottom:28}}>
+            THE FURNITURE SHOP<br/><span style={{color:C.yellow}}>GACHIE NEEDED.</span>
+          </h1>
+          <p style={{color:"#9AAABB",fontSize:16,lineHeight:1.75,maxWidth:440,marginBottom:40,fontFamily:"'DM Sans',sans-serif"}}>
+            We started KARU because finding decent furniture nearby meant a long drive to Ngong Road and half a day gone. Now you don't have to.
+          </p>
+          <div style={{display:"flex",gap:14,flexWrap:"wrap",marginBottom:48}}>
+            <a href="#cat" className="by" style={{background:C.yellow,color:C.navy,padding:"14px 28px",borderRadius:4,fontSize:14,fontWeight:700,display:"inline-block",letterSpacing:"0.02em"}}>See What's In Stock</a>
+            <button className="bg" onClick={()=>wa(null)} style={{background:"transparent",color:C.white,border:"1px solid rgba(255,255,255,0.2)",padding:"14px 28px",borderRadius:4,fontSize:14,letterSpacing:"0.02em"}}>Chat on WhatsApp</button>
+          </div>
+          <div style={{display:"flex",gap:32,flexWrap:"wrap",paddingTop:24,borderTop:"1px solid rgba(255,255,255,0.06)"}}>
+            {[["Solid build quality","Every piece checked before it goes out"],["Honest pricing","No Ngong Road markup"],["Right here","Gachie, off Kiambu Road"]].map(([title,sub])=>(
+              <div key={title}>
+                <div style={{color:C.white,fontSize:13,fontWeight:600,fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>{title}</div>
+                <div style={{color:C.muted,fontSize:12,fontFamily:"'DM Sans',sans-serif"}}>{sub}</div>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Stacked category cards — feels like browsing a showroom */}
         <div className="hv" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-          <div style={{width:360,height:360,borderRadius:"50%",background:"radial-gradient(circle,rgba(245,192,0,0.1) 0%,transparent 70%)",border:"1px solid rgba(245,192,0,0.12)",display:"flex",justifyContent:"center",alignItems:"center",position:"relative"}}>
-            <span style={{fontSize:120,filter:"drop-shadow(0 24px 48px rgba(245,192,0,0.35))"}}>🛋️</span>
-            <div style={{position:"absolute",bottom:40,right:10,background:C.mid,border:"1px solid rgba(245,192,0,0.25)",borderRadius:8,padding:"10px 16px"}}>
-              <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.yellow,fontSize:22,lineHeight:1}}>{products.length||"—"}</div>
-              <div style={{color:C.muted,fontSize:11,marginTop:2}}>Pieces in stock</div>
+          <div style={{position:"relative",width:340,height:420}}>
+            {/* Back card — bedroom */}
+            <div style={{position:"absolute",top:0,right:0,width:270,height:170,background:C.mid,borderRadius:16,border:"1px solid #1A2A4A",padding:"22px 24px",transform:"rotate(4deg)",boxShadow:"0 8px 32px rgba(0,0,0,0.3)"}}>
+              <div style={{color:C.muted,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>BEDROOM</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Beds &<br/>Wardrobes</div>
+            </div>
+            {/* Back-left card — decor */}
+            <div style={{position:"absolute",bottom:0,left:0,width:270,height:170,background:C.light,borderRadius:16,border:"1px solid rgba(245,192,0,0.15)",padding:"22px 24px",transform:"rotate(-3deg)",boxShadow:"0 8px 32px rgba(0,0,0,0.3)"}}>
+              <div style={{color:C.muted,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>DECOR</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Flowers &<br/>Arrangements</div>
+            </div>
+            {/* Front card — living room */}
+            <div style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:280,height:170,background:`linear-gradient(135deg,#0A1A3A,#050A1F)`,borderRadius:16,border:"1px solid rgba(245,192,0,0.35)",padding:"22px 24px",zIndex:10,boxShadow:"0 24px 64px rgba(0,0,0,0.6)"}}>
+              <div style={{color:C.yellow,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>LIVING ROOM</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Sofas, Tables<br/>& More</div>
+              <div style={{position:"absolute",bottom:20,right:20,width:32,height:32,borderRadius:"50%",background:C.yellow,display:"flex",alignItems:"center",justifyContent:"center",color:C.navy,fontSize:14,fontWeight:700}}>→</div>
+            </div>
+            {/* Showroom badge */}
+            <div style={{position:"absolute",top:-16,left:8,background:C.yellow,borderRadius:8,padding:"8px 14px",zIndex:20,boxShadow:"0 4px 16px rgba(245,192,0,0.3)"}}>
+              <div style={{fontFamily:"'DM Sans',sans-serif",color:C.navy,fontSize:11,fontWeight:700}}>📍 Gachie Showroom</div>
             </div>
           </div>
         </div>
@@ -148,17 +174,17 @@ export default function App() {
     {/* CATEGORIES + PRODUCTS */}
     <section id="cat" style={{background:C.mid,padding:"80px 32px"}}>
       <div style={{maxWidth:1200,margin:"0 auto"}}>
-        <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.25em",marginBottom:12,textTransform:"uppercase"}}>WHAT WE STOCK</div>
-        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:C.white,marginBottom:40}}>Browse by Room</h2>
+        <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.2em",marginBottom:12,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>What we carry</div>
+        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:C.white,marginBottom:12,letterSpacing:"0.03em"}}>Shop by Room</h2>
+        <p style={{color:C.muted,fontSize:15,fontFamily:"'DM Sans',sans-serif",marginBottom:40,maxWidth:480,lineHeight:1.6}}>Pick the room you're working on and we'll show you what's available.</p>
         <div className="cg" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:20,marginBottom:60}}>
-          {[{id:"living",icon:"🛋️",label:"Living Room",sub:"Sofas, tables, TV stands"},{id:"bedroom",icon:"🛏️",label:"Bedroom",sub:"Beds, wardrobes, side tables"},{id:"decor",icon:"🌿",label:"Decor & Flowers",sub:"Arrangements, centrepieces"}].map(c=>(
+          {[{id:"living",icon:"🛋️",label:"Living Room",sub:"Make the room you actually live in work for you."},{id:"bedroom",icon:"🛏️",label:"Bedroom",sub:"Sleep well. Start well."},{id:"decor",icon:"🌿",label:"Decor & Flowers",sub:"The finishing touches that make a house feel like yours."}].map(c=>(
             <div key={c.id} className="cc" style={{background:C.navy,border:`1px solid ${cat===c.id?C.yellow:"#1A2A4A"}`,borderRadius:10,padding:"32px 28px",position:"relative"}}
               onClick={()=>{setCat(c.id);track("click",`cat_${c.id}`);}}>
-              <div style={{fontSize:44,marginBottom:16}}>{c.icon}</div>
-              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,color:C.white,marginBottom:6}}>{c.label}</div>
-              <div style={{color:C.muted,fontSize:13}}>{c.sub}</div>
-              <div style={{position:"absolute",top:28,right:28,color:C.yellow,fontSize:20}}>→</div>
-              <div style={{marginTop:16,fontSize:12,color:C.green}}>✓ In Stock</div>
+              <div style={{fontSize:40,marginBottom:18}}>{c.icon}</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,color:C.white,marginBottom:8,letterSpacing:"0.03em"}}>{c.label}</div>
+              <div style={{color:C.muted,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.5}}>{c.sub}</div>
+              <div style={{position:"absolute",top:28,right:28,color:C.yellow,fontSize:18}}>→</div>
             </div>
           ))}
         </div>
@@ -177,11 +203,12 @@ export default function App() {
             </div>
           </div>
           {loading?(
-            <div style={{textAlign:"center",padding:"60px 0",color:C.muted,fontSize:15}}>Loading products...</div>
+            <div style={{textAlign:"center",padding:"60px 0",color:C.muted,fontSize:14,fontFamily:"'DM Sans',sans-serif"}}>Getting things ready...</div>
           ):filtered.length===0?(
-            <div style={{textAlign:"center",padding:"48px 0"}}>
-              <div style={{fontSize:44,marginBottom:12,opacity:0.4}}>🛋️</div>
-              <div style={{color:C.muted,fontSize:14}}>Coming soon — check back after our next sourcing trip.</div>
+            <div style={{padding:"48px 0",maxWidth:400}}>
+              <div style={{color:C.white,fontSize:17,fontFamily:"'DM Sans',sans-serif",fontWeight:600,marginBottom:10}}>We're still loading up the showroom.</div>
+              <div style={{color:C.muted,fontSize:14,fontFamily:"'DM Sans',sans-serif",lineHeight:1.7,marginBottom:24}}>Come back soon — or WhatsApp us and we'll tell you what's available right now.</div>
+              <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"12px 24px",borderRadius:4,fontSize:14,fontWeight:700}}>Ask What's Available</button>
             </div>
           ):(
             <div className="pg" style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:20}}>
@@ -217,11 +244,11 @@ export default function App() {
       <div style={{maxWidth:1200,margin:"0 auto"}}>
         <div className="rf" style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:40,flexWrap:"wrap"}}>
           <div>
-            <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.25em",marginBottom:12,textTransform:"uppercase"}}>INTERESTED?</div>
-            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:C.white,marginBottom:14}}>Reserve a Piece</h2>
-            <p style={{color:C.muted,fontSize:15,lineHeight:1.7,maxWidth:500}}>Found something you love? Send us a WhatsApp and we'll hold it. No deposit needed.</p>
+            <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.2em",marginBottom:12,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Seen something you like?</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:C.white,marginBottom:14,letterSpacing:"0.03em"}}>Hold It For Free</h2>
+            <p style={{color:"#9AAABB",fontSize:15,lineHeight:1.75,maxWidth:480,fontFamily:"'DM Sans',sans-serif"}}>WhatsApp us the piece you want and we'll set it aside. No payment, no commitment — just first dibs while you decide.</p>
           </div>
-          <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"16px 32px",borderRadius:4,fontSize:15,fontWeight:700,whiteSpace:"nowrap"}}>Reserve on WhatsApp →</button>
+          <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"16px 32px",borderRadius:4,fontSize:14,fontWeight:700,whiteSpace:"nowrap",letterSpacing:"0.02em"}}>WhatsApp to Reserve →</button>
         </div>
       </div>
     </section>
@@ -233,14 +260,19 @@ export default function App() {
       <div style={{maxWidth:1200,margin:"0 auto"}}>
         <div className="ff" style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:32,marginBottom:24}}>
           <div>
-            <div style={{display:"flex",alignItems:"baseline",gap:6,marginBottom:8}}>
+            <div style={{display:"flex",alignItems:"baseline",gap:6,marginBottom:10}}>
               <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,color:C.yellow,letterSpacing:"0.1em"}}>KARU</span>
               <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:16,color:C.white,letterSpacing:"0.2em",opacity:0.7}}>FURNITURE</span>
             </div>
-            <div style={{color:C.muted,fontSize:12,letterSpacing:"0.15em"}}>Quality · Affordable · Stylish</div>
+            <div style={{color:C.muted,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.6,maxWidth:240}}>Good furniture, fair prices, right here in your neighbourhood.</div>
           </div>
-          <div style={{display:"flex",flexDirection:"column",gap:8}}>
-            {["📍 Gachie, Kiambu Road","📞 0720 772 866","⏰ Mon–Sat 8am–7pm | Sun 10am–5pm"].map(l=><div key={l} style={{color:C.dark,fontSize:13}}>{l}</div>)}
+          <div style={{display:"flex",flexDirection:"column",gap:10}}>
+            {[["📍","Gachie, off Kiambu Road, Nairobi"],["📞","0720 772 866"],["⏰","Mon–Sat 8am–7pm  ·  Sun 10am–5pm"]].map(([icon,text])=>(
+              <div key={text} style={{display:"flex",alignItems:"flex-start",gap:8}}>
+                <span style={{fontSize:13}}>{icon}</span>
+                <span style={{color:C.dark,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.5}}>{text}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div style={{borderTop:`1px solid ${C.mid}`,paddingTop:20}}>

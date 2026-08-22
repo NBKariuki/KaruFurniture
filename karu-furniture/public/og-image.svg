@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#050A1F"/>
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#0A1128" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5C000;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#050A1F;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <ellipse cx="200" cy="315" rx="400" ry="400" fill="url(#glow)"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="180" width="4" height="270" fill="#F5C000" rx="2"/>
+
+  <!-- KARU wordmark -->
+  <text x="108" y="290" font-family="Arial Black, sans-serif" font-size="112" font-weight="900" fill="#FFFFFF" letter-spacing="4">KARU</text>
+
+  <!-- FURNITURE -->
+  <text x="110" y="356" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#F5C000" letter-spacing="12">FURNITURE</text>
+
+  <!-- Tagline -->
+  <text x="110" y="406" font-family="Arial, sans-serif" font-size="22" fill="#8899AA" letter-spacing="1">Good furniture, fair prices — right here in Gachie.</text>
+
+  <!-- Divider -->
+  <rect x="110" y="432" width="500" height="1" fill="#1A2A4A"/>
+
+  <!-- Location + contact -->
+  <text x="110" y="468" font-family="Arial, sans-serif" font-size="20" fill="#556677">📍 Gachie, Kiambu Road, Nairobi</text>
+  <text x="110" y="500" font-family="Arial, sans-serif" font-size="20" fill="#556677">📞 0720 772 866</text>
+
+  <!-- Right side decoration -->
+  <rect x="820" y="80" width="300" height="200" rx="16" fill="#0A1128" stroke="#1A2A4A" stroke-width="1"/>
+  <text x="840" y="120" font-family="Arial, sans-serif" font-size="11" fill="#8899AA" letter-spacing="2">LIVING ROOM</text>
+  <text x="840" y="160" font-family="Arial Black, sans-serif" font-size="32" fill="#FFFFFF">Sofas &amp;</text>
+  <text x="840" y="200" font-family="Arial Black, sans-serif" font-size="32" fill="#FFFFFF">Tables</text>
+
+  <rect x="860" y="310" width="300" height="200" rx="16" fill="#0F1A3A" stroke="rgba(245,192,0,0.25)" stroke-width="1"/>
+  <text x="880" y="350" font-family="Arial, sans-serif" font-size="11" fill="#F5C000" letter-spacing="2">BEDROOM</text>
+  <text x="880" y="390" font-family="Arial Black, sans-serif" font-size="32" fill="#FFFFFF">Beds &amp;</text>
+  <text x="880" y="430" font-family="Arial Black, sans-serif" font-size="32" fill="#FFFFFF">Wardrobes</text>
+
+  <!-- URL badge -->
+  <rect x="80" y="548" width="300" height="44" rx="22" fill="rgba(245,192,0,0.12)" stroke="rgba(245,192,0,0.3)" stroke-width="1"/>
+  <text x="230" y="576" font-family="Arial, sans-serif" font-size="16" fill="#F5C000" text-anchor="middle">karufurniture.netlify.app</text>
+</svg>
