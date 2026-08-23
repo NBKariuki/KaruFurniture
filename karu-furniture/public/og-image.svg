@@ -30,7 +30,7 @@
   <rect x="110" y="432" width="500" height="1" fill="#1A2A4A"/>
 
   <!-- Location + contact -->
-  <text x="110" y="468" font-family="Arial, sans-serif" font-size="20" fill="#556677">📍 Gachie, Kiambu Road, Nairobi</text>
+  <text x="110" y="468" font-family="Arial, sans-serif" font-size="20" fill="#556677">📍 Off Kihara-Gachie-Karura Rd, Nairobi</text>
   <text x="110" y="500" font-family="Arial, sans-serif" font-size="20" fill="#556677">📞 0720 772 866</text>
 
   <!-- Right side decoration -->

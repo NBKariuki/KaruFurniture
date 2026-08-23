@@ -125,7 +125,7 @@ export default function App() {
           </div>
           <h1 className="h1" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:82,lineHeight:0.95,color:C.white,letterSpacing:"0.02em",marginBottom:28}}>
             THE FURNITURE SHOP<br/>
-            <span style={{fontFamily:"'DM Sans',sans-serif",fontWeight:300,fontSize:64,letterSpacing:"-0.01em"}}>We </span><span style={{color:C.yellow}}>NEEDED</span>
+            <span style={{color:C.yellow}}>WE NEEDED</span>
           </h1>
           <p style={{color:"#9AAABB",fontSize:16,lineHeight:1.75,maxWidth:440,marginBottom:40,fontFamily:"'DM Sans',sans-serif"}}>
             Furnishing a home takes enough time and money. KARU makes the furniture part simple with guaranteed quality pieces, fair prices, right where you are.
@@ -135,7 +135,7 @@ export default function App() {
             <button className="bg" onClick={()=>wa(null)} style={{background:"transparent",color:C.white,border:"1px solid rgba(255,255,255,0.2)",padding:"14px 28px",borderRadius:4,fontSize:14,letterSpacing:"0.02em"}}>Chat on WhatsApp</button>
           </div>
           <div style={{display:"flex",gap:32,flexWrap:"wrap",paddingTop:24,borderTop:"1px solid rgba(255,255,255,0.06)"}}>
-            {[["Solid build quality","Every piece checked before it goes out"],["Honest pricing","What you see is what you pay"],["Right here","Gachie, off Kiambu Road"]].map(([title,sub])=>(
+            {[["Solid build quality","Every piece checked before it goes out"],["Honest pricing","What you see is what you pay"],["Right here","Off Kihara-Gachie-Karura Rd"]].map(([title,sub])=>(
               <div key={title}>
                 <div style={{color:C.white,fontSize:13,fontWeight:600,fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>{title}</div>
                 <div style={{color:C.muted,fontSize:12,fontFamily:"'DM Sans',sans-serif"}}>{sub}</div>
@@ -165,7 +165,9 @@ export default function App() {
             </div>
             {/* Showroom badge */}
             <div style={{position:"absolute",top:-16,left:8,background:C.yellow,borderRadius:8,padding:"8px 14px",zIndex:20,boxShadow:"0 4px 16px rgba(245,192,0,0.3)"}}>
+            <a href="https://maps.app.goo.gl/enRCVuNx5PoFA1iu9" target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>
               <div style={{fontFamily:"'DM Sans',sans-serif",color:C.navy,fontSize:11,fontWeight:700}}>📍 Gachie Showroom</div>
+            </a>
             </div>
           </div>
         </div>
@@ -268,7 +270,11 @@ export default function App() {
             <div style={{color:C.muted,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.6,maxWidth:240}}>Good furniture, fair prices, right here in your neighbourhood.</div>
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:10}}>
-            {[["📍","Gachie, off Kiambu Road, Nairobi"],["📞","0720 772 866"],["⏰","Mon–Sat 8am–7pm  ·  Sun 10am–5pm"]].map(([icon,text])=>(
+            <a href="https://maps.app.goo.gl/enRCVuNx5PoFA1iu9" target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"flex-start",gap:8,textDecoration:"none"}}>
+              <span style={{fontSize:13}}>📍</span>
+              <span style={{color:C.yellow,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.5,borderBottom:"1px solid rgba(245,192,0,0.3)"}}>Off Kihara-Gachie-Karura Rd, Nairobi</span>
+            </a>
+            {[["📞","0720 772 866"],["⏰","Mon-Sat 8am-7pm  ·  Sun 10am-5pm"]].map(([icon,text])=>(
               <div key={text} style={{display:"flex",alignItems:"flex-start",gap:8}}>
                 <span style={{fontSize:13}}>{icon}</span>
                 <span style={{color:C.dark,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.5}}>{text}</span>
