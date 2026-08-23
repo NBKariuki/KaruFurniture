@@ -124,17 +124,18 @@ export default function App() {
             <span style={{color:C.yellow,fontSize:12,fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>Now open in Gachie, Nairobi</span>
           </div>
           <h1 className="h1" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:82,lineHeight:0.95,color:C.white,letterSpacing:"0.02em",marginBottom:28}}>
-            THE FURNITURE SHOP<br/><span style={{color:C.yellow}}>GACHIE NEEDED.</span>
+            THE FURNITURE SHOP<br/>
+            <span style={{fontFamily:"'DM Sans',sans-serif",fontWeight:300,fontSize:64,letterSpacing:"-0.01em"}}>We </span><span style={{color:C.yellow}}>NEEDED</span>
           </h1>
           <p style={{color:"#9AAABB",fontSize:16,lineHeight:1.75,maxWidth:440,marginBottom:40,fontFamily:"'DM Sans',sans-serif"}}>
-            We started KARU because finding decent furniture nearby meant a long drive to Ngong Road and half a day gone. Now you don't have to.
+            Furnishing a home takes enough time and money. KARU makes the furniture part simple with guaranteed quality pieces, fair prices, right where you are.
           </p>
           <div style={{display:"flex",gap:14,flexWrap:"wrap",marginBottom:48}}>
             <a href="#cat" className="by" style={{background:C.yellow,color:C.navy,padding:"14px 28px",borderRadius:4,fontSize:14,fontWeight:700,display:"inline-block",letterSpacing:"0.02em"}}>See What's In Stock</a>
             <button className="bg" onClick={()=>wa(null)} style={{background:"transparent",color:C.white,border:"1px solid rgba(255,255,255,0.2)",padding:"14px 28px",borderRadius:4,fontSize:14,letterSpacing:"0.02em"}}>Chat on WhatsApp</button>
           </div>
           <div style={{display:"flex",gap:32,flexWrap:"wrap",paddingTop:24,borderTop:"1px solid rgba(255,255,255,0.06)"}}>
-            {[["Solid build quality","Every piece checked before it goes out"],["Honest pricing","No Ngong Road markup"],["Right here","Gachie, off Kiambu Road"]].map(([title,sub])=>(
+            {[["Solid build quality","Every piece checked before it goes out"],["Honest pricing","What you see is what you pay"],["Right here","Gachie, off Kiambu Road"]].map(([title,sub])=>(
               <div key={title}>
                 <div style={{color:C.white,fontSize:13,fontWeight:600,fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>{title}</div>
                 <div style={{color:C.muted,fontSize:12,fontFamily:"'DM Sans',sans-serif"}}>{sub}</div>
@@ -143,24 +144,24 @@ export default function App() {
           </div>
         </div>
 
-        {/* Stacked category cards — feels like browsing a showroom */}
+        {/* Stacked category cards */}
         <div className="hv" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
           <div style={{position:"relative",width:340,height:420}}>
-            {/* Back card — bedroom */}
+            {/* Back card bedroom */}
             <div style={{position:"absolute",top:0,right:0,width:270,height:170,background:C.mid,borderRadius:16,border:"1px solid #1A2A4A",padding:"22px 24px",transform:"rotate(4deg)",boxShadow:"0 8px 32px rgba(0,0,0,0.3)"}}>
               <div style={{color:C.muted,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>BEDROOM</div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Beds &<br/>Wardrobes</div>
             </div>
-            {/* Back-left card — decor */}
+            {/* Back card decor */}
             <div style={{position:"absolute",bottom:0,left:0,width:270,height:170,background:C.light,borderRadius:16,border:"1px solid rgba(245,192,0,0.15)",padding:"22px 24px",transform:"rotate(-3deg)",boxShadow:"0 8px 32px rgba(0,0,0,0.3)"}}>
               <div style={{color:C.muted,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>DECOR</div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Flowers &<br/>Arrangements</div>
             </div>
-            {/* Front card — living room */}
+            {/* Front card living room */}
             <div style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:280,height:170,background:`linear-gradient(135deg,#0A1A3A,#050A1F)`,borderRadius:16,border:"1px solid rgba(245,192,0,0.35)",padding:"22px 24px",zIndex:10,boxShadow:"0 24px 64px rgba(0,0,0,0.6)"}}>
               <div style={{color:C.yellow,fontSize:10,letterSpacing:"0.15em",marginBottom:10,fontFamily:"'DM Sans',sans-serif"}}>LIVING ROOM</div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",color:C.white,fontSize:30,lineHeight:1.1,letterSpacing:"0.03em"}}>Sofas, Tables<br/>& More</div>
-              <div style={{position:"absolute",bottom:20,right:20,width:32,height:32,borderRadius:"50%",background:C.yellow,display:"flex",alignItems:"center",justifyContent:"center",color:C.navy,fontSize:14,fontWeight:700}}>→</div>
+              <div style={{position:"absolute",bottom:20,right:20,width:32,height:32,borderRadius:"50%",background:C.yellow,display:"flex",alignItems:"center",justifyContent:"center",color:C.navy,fontSize:13,fontWeight:700}}>›</div>
             </div>
             {/* Showroom badge */}
             <div style={{position:"absolute",top:-16,left:8,background:C.yellow,borderRadius:8,padding:"8px 14px",zIndex:20,boxShadow:"0 4px 16px rgba(245,192,0,0.3)"}}>
@@ -184,12 +185,12 @@ export default function App() {
               <div style={{fontSize:40,marginBottom:18}}>{c.icon}</div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,color:C.white,marginBottom:8,letterSpacing:"0.03em"}}>{c.label}</div>
               <div style={{color:C.muted,fontSize:13,fontFamily:"'DM Sans',sans-serif",lineHeight:1.5}}>{c.sub}</div>
-              <div style={{position:"absolute",top:28,right:28,color:C.yellow,fontSize:18}}>→</div>
+              <div style={{position:"absolute",top:28,right:28,color:C.yellow,fontSize:18}}>›</div>
             </div>
           ))}
         </div>
 
-        {/* PRODUCT GRID — dark themed, no white section */}
+        {/* PRODUCT GRID */}
         <div style={{borderTop:"1px solid #1A2A4A",paddingTop:48}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:32,flexWrap:"wrap",gap:16}}>
             <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.25em",textTransform:"uppercase"}}>THE COLLECTION</div>
@@ -207,7 +208,7 @@ export default function App() {
           ):filtered.length===0?(
             <div style={{padding:"48px 0",maxWidth:400}}>
               <div style={{color:C.white,fontSize:17,fontFamily:"'DM Sans',sans-serif",fontWeight:600,marginBottom:10}}>We're still loading up the showroom.</div>
-              <div style={{color:C.muted,fontSize:14,fontFamily:"'DM Sans',sans-serif",lineHeight:1.7,marginBottom:24}}>Come back soon — or WhatsApp us and we'll tell you what's available right now.</div>
+              <div style={{color:C.muted,fontSize:14,fontFamily:"'DM Sans',sans-serif",lineHeight:1.7,marginBottom:24}}>Come back soon. WhatsApp us and we'll tell you what's available right now.</div>
               <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"12px 24px",borderRadius:4,fontSize:14,fontWeight:700}}>Ask What's Available</button>
             </div>
           ):(
@@ -246,9 +247,9 @@ export default function App() {
           <div>
             <div style={{color:C.yellow,fontSize:11,letterSpacing:"0.2em",marginBottom:12,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Seen something you like?</div>
             <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:C.white,marginBottom:14,letterSpacing:"0.03em"}}>Hold It For Free</h2>
-            <p style={{color:"#9AAABB",fontSize:15,lineHeight:1.75,maxWidth:480,fontFamily:"'DM Sans',sans-serif"}}>WhatsApp us the piece you want and we'll set it aside. No payment, no commitment — just first dibs while you decide.</p>
+            <p style={{color:"#9AAABB",fontSize:15,lineHeight:1.75,maxWidth:480,fontFamily:"'DM Sans',sans-serif"}}>WhatsApp us the piece you want and we'll set it aside. No payment, no commitment. Just first dibs while you decide.</p>
           </div>
-          <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"16px 32px",borderRadius:4,fontSize:14,fontWeight:700,whiteSpace:"nowrap",letterSpacing:"0.02em"}}>WhatsApp to Reserve →</button>
+          <button className="by" onClick={()=>wa(null)} style={{background:C.yellow,color:C.navy,border:"none",padding:"16px 32px",borderRadius:4,fontSize:14,fontWeight:700,whiteSpace:"nowrap",letterSpacing:"0.02em"}}>WhatsApp to Reserve</button>
         </div>
       </div>
     </section>
@@ -468,7 +469,7 @@ function AdminDash({products,analytics,setProducts,onBack}) {
             {/* Charts */}
             <div style={{background:C.mid,border:"1px solid #1A2A4A",borderRadius:8,padding:24,marginBottom:20}}>
               <div style={{color:C.muted,fontSize:10,letterSpacing:"0.1em",marginBottom:16}}>TOP PRODUCTS BY ENGAGEMENT</div>
-              {chartD.every(d=>d.v+d.w+d.r===0)?<div style={{color:C.muted,textAlign:"center",padding:"24px 0",fontSize:13}}>No engagement data yet — share your site link.</div>:(
+              {chartD.every(d=>d.v+d.w+d.r===0)?<div style={{color:C.muted,textAlign:"center",padding:"24px 0",fontSize:13}}>No engagement data yet. Share your site link to start tracking.</div>:(
                 <ResponsiveContainer width="100%" height={200}>
                   <BarChart data={chartD} margin={{left:-20}}>
                     <XAxis dataKey="name" tick={{fill:C.muted,fontSize:9}}/>
@@ -519,10 +520,10 @@ function AdminDash({products,analytics,setProducts,onBack}) {
               [...items].sort((a,b)=>(getA(b.id).view||0)-(getA(a.id).view||0)).slice(0,5).map(p=>{
                 const a=getA(p.id); const v=a.view||0; const w=a.whatsapp||0; const r=a.reserve||0;
                 let insight="";
-                if(v>3&&w===0) insight=`"${p.name}" gets views but no WhatsApp clicks — price may be too high or description needs work.`;
-                else if(w>1&&r===0) insight=`"${p.name}" generates WhatsApp interest but no reserves — follow up faster on enquiries.`;
-                else if(v>0&&w>0&&Math.round(w/v*100)>30) insight=`"${p.name}" has a strong ${Math.round(w/v*100)}% click-through rate — consider restocking more.`;
-                else if(v===0&&p.status==="In Stock") insight=`"${p.name}" has had zero views — push it on WhatsApp Status.`;
+                if(v>3&&w===0) insight=`"${p.name}" gets views but no WhatsApp clicks. Price may be too high or description needs work.`;
+                else if(w>1&&r===0) insight=`"${p.name}" generates WhatsApp interest but no reserves. Follow up faster on enquiries.`;
+                else if(v>0&&w>0&&Math.round(w/v*100)>30) insight=`"${p.name}" has a strong ${Math.round(w/v*100)}% click-through rate. Consider restocking more.`;
+                else if(v===0&&p.status==="In Stock") insight=`"${p.name}" has had zero views. Push it on WhatsApp Status.`;
                 if(!insight) return null;
                 return <div key={p.id} style={{borderLeft:`3px solid ${C.yellow}`,paddingLeft:12,marginBottom:12,fontSize:13,color:C.muted,lineHeight:1.5}}>{insight}</div>;
               })}
@@ -568,7 +569,7 @@ function ProdForm({initial,onSave,onCancel,saving}) {
             </select>
           </div>
           {inp("SALE PRICE (KSh) *","price","number","25000")}
-          {inp("ORIGINAL PRICE — for discount display","original_price","number","Leave blank if no discount")}
+          {inp("ORIGINAL PRICE (for discount display)","original_price","number","Leave blank if no discount")}
           {inp("BADGE TEXT","badge","text","New Arrival, Best Seller, Sale…")}
           <div style={{marginBottom:14}}>
             <label style={{display:"block",color:C.muted,fontSize:10,letterSpacing:"0.1em",marginBottom:5}}>STATUS</label>
